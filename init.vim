@@ -40,7 +40,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'neoclide/coc.nvim', {'branch' : 'release'}
 " its a debugger
 Plug 'nvim-telescope/telescope.nvim'
-Plug 'puremourning/vimspector'
+"Plug 'puremourning/vimspector'
 Plug 'tpope/vim-fugitive'
 Plug 'bignimbus/pop-punk.vim'
 " i don't know view or grep man pages 
@@ -76,7 +76,8 @@ function! TermWrapper(command) abort
 	exec buffercmd
 	exec 'term ' . a:command
 	exec 'setlocal nornu nonu'
-	exec 'startinsert'
+	"exec 'startinsert'
+    "autocmd BufEnter <buffer> startinsert
 endfunction
 
 "vim-fugitive intergration remaps
